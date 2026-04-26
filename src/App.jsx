@@ -13,7 +13,6 @@ import CTABanner from "./components/CTABanner";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhatsAppFAB from "./components/WhatsAppFAB";
-import ScrollToTop from "./components/ScrollToTop";
 import Loader from "./components/Loader";
 
 function App() {
@@ -50,7 +49,6 @@ function App() {
           </main>
           <Footer />
           <WhatsAppFAB />
-          <ScrollToTop />
         </>
       )}
     </div>
