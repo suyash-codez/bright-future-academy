@@ -118,25 +118,6 @@ export default function Contact() {
             </motion.a>
           </motion.div>
         </motion.div>
-
-        {/* Google Maps Embed */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto mt-10 md:mt-16 rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-[250px] md:h-[350px]"
-        >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.61368048706!2d77.0688996903268!3d28.527218143961814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Academy Location"
-          ></iframe>
-        </motion.div>
       </div>
     </section>
   );
