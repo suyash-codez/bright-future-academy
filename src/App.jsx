@@ -1,12 +1,16 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Stats from "./components/Stats";
 import About from "./components/About";
 import Courses from "./components/Courses";
 import WhyChooseUs from "./components/WhyChooseUs";
+import FAQ from "./components/FAQ";
 import Testimonials from "./components/Testimonials";
 import Schedule from "./components/Schedule";
+import CTABanner from "./components/CTABanner";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import WhatsAppFAB from "./components/WhatsAppFAB";
 
 function App() {
   return (
@@ -14,14 +18,18 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <Stats />
         <About />
         <Courses />
         <WhyChooseUs />
+        <FAQ />
         <Testimonials />
         <Schedule />
+        <CTABanner />
         <Contact />
       </main>
       <Footer />
+      <WhatsAppFAB />
     </div>
   );
 }
