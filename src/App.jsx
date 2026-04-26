@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
@@ -11,25 +13,46 @@ import CTABanner from "./components/CTABanner";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhatsAppFAB from "./components/WhatsAppFAB";
+import ScrollToTop from "./components/ScrollToTop";
+import Loader from "./components/Loader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Artificial delay to show loader (simulate loading assets)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background-gray font-sans text-text-dark">
-      <Navbar />
-      <main>
-        <Hero />
-        <Stats />
-        <About />
-        <Courses />
-        <WhyChooseUs />
-        <FAQ />
-        <Testimonials />
-        <Schedule />
-        <CTABanner />
-        <Contact />
-      </main>
-      <Footer />
-      <WhatsAppFAB />
+      <AnimatePresence mode="wait">
+        {loading && <Loader key="loader" onComplete={() => {}} />}
+      </AnimatePresence>
+
+      {!loading && (
+        <>
+          <Navbar />
+          <main>
+            <Hero />
+            <Stats />
+            <About />
+            <Courses />
+            <WhyChooseUs />
+            <FAQ />
+            <Testimonials />
+            <Schedule />
+            <CTABanner />
+            <Contact />
+          </main>
+          <Footer />
+          <WhatsAppFAB />
+          <ScrollToTop />
+        </>
+      )}
     </div>
   );
 }
